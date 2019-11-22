@@ -154,36 +154,21 @@ namespace QLBH_ProductManagement
                 f.Activate();
             }
         }
-        private void btnDepartment_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        //button Nhà cung cấp
+        private void btnSupplier_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form f = IsActive(typeof(frmDepartment));
+            Form f = IsActive(typeof(frmSupplier));
             if (f == null)
             {
-                Form frmDepartment = new frmDepartment();
-                frmDepartment.MdiParent = this;
-                frmDepartment.Show();
+                Form fSupplier = new frmSupplier();
+                fSupplier.MdiParent = this;
+                fSupplier.Show();
             }
             else
             {
                 f.Activate();
             }
         }
-
-        private void btnEmployees_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Form f = IsActive(typeof(frmEmployees));
-            if (f == null)
-            {
-                Form frmEmployees = new frmEmployees();
-                frmEmployees.MdiParent = this;
-                frmEmployees.Show();
-            }
-            else
-            {
-                f.Activate();
-            }
-        }
-
 
         #endregion
 
@@ -204,7 +189,51 @@ namespace QLBH_ProductManagement
                 f.Activate();
             }
         }
-
+        //button bán hàng
+        private void btnSell_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form f = IsActive(typeof(frmSell));
+            if (f == null)
+            {
+                Form fSell = new frmSell();
+                fSell.MdiParent = this;
+                fSell.Show();
+            }
+            else
+            {
+                f.Activate();
+            }
+        }
+        //button chuyển kho
+        private void btnWarehouseTransfer_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form f = IsActive(typeof(frmWarehouseTransfer));
+            if (f == null)
+            {
+                Form fWarehouseTransfer = new frmWarehouseTransfer();
+                fWarehouseTransfer.MdiParent = this;
+                fWarehouseTransfer.Show();
+            }
+            else
+            {
+                f.Activate();
+            }
+        }
+        //button báo cáo kho hàng
+        private void btnWarehouseReport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form f = IsActive(typeof(frmWarehouseReport));
+            if (f == null)
+            {
+                Form fWarehouseReport = new frmWarehouseReport();
+                fWarehouseReport.MdiParent = this;
+                fWarehouseReport.Show();
+            }
+            else
+            {
+                f.Activate();
+            }
+        }
 
 
         #endregion
@@ -214,49 +243,5 @@ namespace QLBH_ProductManagement
 
         #endregion
 
-        private void btnWarehouse_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Form f = IsActive(typeof(frmWarehouse));
-            if (f == null)
-            {
-                Form frmWarehouse = new frmWarehouse();
-                frmWarehouse.MdiParent = this;
-                frmWarehouse.Show();
-            }
-            else
-            {
-                f.Activate();
-            }
-        }
-
-        private void btnRates_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Form f = IsActive(typeof(frmRates));
-            if (f == null)
-            {
-                Form frmRates = new frmRates();
-                frmRates.MdiParent = this;
-                frmRates.Show();
-            }
-            else
-            {
-                f.Activate();
-            }
-        }
-
-        private void btnUnit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Form f = IsActive(typeof(frmUnit));
-            if (f == null)
-            {
-                Form frmUnit = new frmUnit();
-                frmUnit.MdiParent = this;
-                frmUnit.Show();
-            }
-            else
-            {
-                f.Activate();
-            }
-        }
     }
 }

@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmArea));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
@@ -43,17 +42,12 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
-            this.grcArea = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.MaKV = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TenKV = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.GhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Active = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grcArea)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -182,6 +176,24 @@
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 384);
             // 
+            // gridControl1
+            // 
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 26);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.MenuManager = this.barManager1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(947, 384);
+            this.gridControl1.TabIndex = 4;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
             // barButtonItem7
             // 
             this.barButtonItem7.Caption = "barButtonItem7";
@@ -189,82 +201,12 @@
             this.barButtonItem7.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem7.ImageOptions.SvgImage")));
             this.barButtonItem7.Name = "barButtonItem7";
             // 
-            // grcArea
-            // 
-            this.grcArea.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode1.RelationName = "Level1";
-            this.grcArea.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
-            this.grcArea.Location = new System.Drawing.Point(0, 26);
-            this.grcArea.MainView = this.gridView2;
-            this.grcArea.Name = "grcArea";
-            this.grcArea.Size = new System.Drawing.Size(947, 384);
-            this.grcArea.TabIndex = 26;
-            this.grcArea.UseEmbeddedNavigator = true;
-            this.grcArea.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
-            this.grcArea.Load += new System.EventHandler(this.grcArea_Load_1);
-           // this.grcArea.Click += new System.EventHandler(this.grcArea_Click);
-            // 
-            // gridView2
-            // 
-            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.MaKV,
-            this.TenKV,
-            this.GhiChu,
-            this.Active,
-            this.gridColumn1});
-            this.gridView2.GridControl = this.grcArea;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsView.ShowGroupPanel = false;
-            // 
-            // MaKV
-            // 
-            this.MaKV.Caption = "Mã";
-            this.MaKV.FieldName = "iMaKV";
-            this.MaKV.Name = "MaKV";
-            this.MaKV.Visible = true;
-            this.MaKV.VisibleIndex = 0;
-            this.MaKV.Width = 219;
-            // 
-            // TenKV
-            // 
-            this.TenKV.Caption = "Tên";
-            this.TenKV.FieldName = "iTenKV";
-            this.TenKV.Name = "TenKV";
-            this.TenKV.Visible = true;
-            this.TenKV.VisibleIndex = 1;
-            this.TenKV.Width = 205;
-            // 
-            // GhiChu
-            // 
-            this.GhiChu.Caption = "Ghi Chú";
-            this.GhiChu.FieldName = "iGhiChu";
-            this.GhiChu.Name = "GhiChu";
-            this.GhiChu.Visible = true;
-            this.GhiChu.VisibleIndex = 2;
-            this.GhiChu.Width = 205;
-            // 
-            // Active
-            // 
-            this.Active.Caption = "Còn Quản Lý";
-            this.Active.FieldName = "iActive";
-            this.Active.Name = "Active";
-            this.Active.Visible = true;
-            this.Active.VisibleIndex = 3;
-            this.Active.Width = 213;
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Width = 86;
-            // 
             // frmArea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(947, 410);
-            this.Controls.Add(this.grcArea);
+            this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -272,8 +214,8 @@
             this.Name = "frmArea";
             this.Text = "Khu Vực";
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grcArea)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,13 +235,8 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
-        private DevExpress.XtraGrid.GridControl grcArea;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private DevExpress.XtraGrid.Columns.GridColumn MaKV;
-        private DevExpress.XtraGrid.Columns.GridColumn TenKV;
-        private DevExpress.XtraGrid.Columns.GridColumn GhiChu;
-        private DevExpress.XtraGrid.Columns.GridColumn Active;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

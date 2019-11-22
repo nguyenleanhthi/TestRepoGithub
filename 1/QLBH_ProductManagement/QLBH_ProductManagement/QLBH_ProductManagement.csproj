@@ -75,8 +75,11 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -87,47 +90,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BUS\AreaBUS.cs" />
     <Compile Include="BUS\ChildFormBUS.cs" />
-    <Compile Include="BUS\DepartmentBUS.cs" />
-    <Compile Include="BUS\EmployeesBUS.cs" />
     <Compile Include="BUS\GroupFormBUS.cs" />
-    <Compile Include="BUS\GroupOfGoodsBUS.cs" />
     <Compile Include="BUS\GroupUserBUS.cs" />
     <Compile Include="BUS\OBFormBUS.cs" />
-    <Compile Include="BUS\RatesBUS.cs" />
     <Compile Include="BUS\RuleFormBUS.cs" />
-    <Compile Include="BUS\UnitBUS.cs" />
     <Compile Include="BUS\UserBUS.cs" />
-    <Compile Include="BUS\WarehouseBUS.cs" />
-    <Compile Include="DAO\AreaDAO.cs" />
     <Compile Include="DAO\ConnectionDB.cs" />
-    <Compile Include="DAO\DepartmentDAO.cs" />
-    <Compile Include="DAO\EmployeesDAO.cs" />
     <Compile Include="DAO\FormChildDAO.cs" />
     <Compile Include="DAO\GroupFormDAO.cs" />
-    <Compile Include="DAO\GroupOfGoodsDAO.cs" />
     <Compile Include="DAO\GroupUserDAO.cs" />
     <Compile Include="DAO\OBFormDAO.cs" />
-    <Compile Include="DAO\RatesDAO.cs" />
     <Compile Include="DAO\RuleFormDAO.cs" />
-    <Compile Include="DAO\UnitDAO.cs" />
     <Compile Include="DAO\UserDAO.cs" />
-    <Compile Include="DAO\WarehouseDAO.cs" />
-    <Compile Include="DTO\AreaDTO.cs" />
-    <Compile Include="DTO\DepartmentDTO.cs" />
-    <Compile Include="DTO\EmployeesDTO.cs" />
     <Compile Include="DTO\FormChild.cs" />
     <Compile Include="DTO\GroupForm.cs" />
-    <Compile Include="DTO\GroupOfGoodsDTO.cs" />
     <Compile Include="DTO\GroupUser.cs" />
     <Compile Include="DTO\OBForm.cs" />
-    <Compile Include="DTO\RatesDTO.cs" />
     <Compile Include="DTO\RuleForm.cs" />
-    <Compile Include="DTO\UnitDTO.cs" />
     <Compile Include="DTO\UserDTO.cs" />
     <Compile Include="DTO\UserGroupDTO.cs" />
-    <Compile Include="DTO\WarehouseDTO.cs" />
     <Compile Include="GUI\frmArea.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,11 +122,23 @@
     <Compile Include="GUI\frmBuy.Designer.cs">
       <DependentUpon>frmBuy.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmBuy_Warehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmBuy_Warehouse.Designer.cs">
+      <DependentUpon>frmBuy_Warehouse.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frmChangePassword.Designer.cs">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmCollectMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmCollectMoney.Designer.cs">
+      <DependentUpon>frmCollectMoney.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmCustomer.cs">
       <SubType>Form</SubType>
@@ -152,17 +146,11 @@
     <Compile Include="GUI\frmCustomer.Designer.cs">
       <DependentUpon>frmCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmDepartment.cs">
+    <Compile Include="GUI\frmBuy_Customer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmDepartment.Designer.cs">
-      <DependentUpon>frmDepartment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\frmEmployees.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmEmployees.Designer.cs">
-      <DependentUpon>frmEmployees.cs</DependentUpon>
+    <Compile Include="GUI\frmBuy_Customer.Designer.cs">
+      <DependentUpon>frmBuy_Customer.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmEnterBalance.cs">
       <SubType>Form</SubType>
@@ -175,6 +163,12 @@
     </Compile>
     <Compile Include="GUI\frmFlash.Designer.cs">
       <DependentUpon>frmFlash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmBuy_Goods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmBuy_Goods.Designer.cs">
+      <DependentUpon>frmBuy_Goods.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmGroupOfGoods.cs">
       <SubType>Form</SubType>
@@ -194,17 +188,23 @@
     <Compile Include="GUI\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmRates.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmRates.Designer.cs">
-      <DependentUpon>frmRates.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\frmRole.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frmRole.Designer.cs">
       <DependentUpon>frmRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmSell.Designer.cs">
+      <DependentUpon>frmSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmSupplier.Designer.cs">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmSystemLog.cs">
       <SubType>Form</SubType>
@@ -212,23 +212,59 @@
     <Compile Include="GUI\frmSystemLog.Designer.cs">
       <DependentUpon>frmSystemLog.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmUnit.cs">
+    <Compile Include="GUI\frmWarehouseReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmUnit.Designer.cs">
-      <DependentUpon>frmUnit.cs</DependentUpon>
+    <Compile Include="GUI\frmWarehouseReport.Designer.cs">
+      <DependentUpon>frmWarehouseReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmWarehouse.cs">
+    <Compile Include="GUI\frmWarehouseTransfer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmWarehouse.Designer.cs">
-      <DependentUpon>frmWarehouse.cs</DependentUpon>
+    <Compile Include="GUI\frmWarehouseTransfer.Designer.cs">
+      <DependentUpon>frmWarehouseTransfer.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\UserControlRole.cs">
+    <Compile Include="GUI\ucWarehouseTransferPhieuChuyenKho.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\UserControlRole.Designer.cs">
-      <DependentUpon>UserControlRole.cs</DependentUpon>
+    <Compile Include="GUI\ucWarehouseTransferPhieuChuyenKho.Designer.cs">
+      <DependentUpon>ucWarehouseTransferPhieuChuyenKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucBuyPhieuNhapHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucBuyPhieuNhapHang.Designer.cs">
+      <DependentUpon>ucBuyPhieuNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucBuyTheoChungTu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucBuyTheoChungTu.Designer.cs">
+      <DependentUpon>ucBuyTheoChungTu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucBuyTheoHangHoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucBuyTheoHangHoa.Designer.cs">
+      <DependentUpon>ucBuyTheoHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucSellPhieuBanHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucSellPhieuBanHang.Designer.cs">
+      <DependentUpon>ucSellPhieuBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucSellTheoChungTu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucSellTheoChungTu.Designer.cs">
+      <DependentUpon>ucSellTheoChungTu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucSellTheoHangHoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucSellTheoHangHoa.Designer.cs">
+      <DependentUpon>ucSellTheoHangHoa.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -247,20 +283,20 @@
     <EmbeddedResource Include="GUI\frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmCollectMoney.resx">
+      <DependentUpon>frmCollectMoney.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmCustomer.resx">
       <DependentUpon>frmCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmDepartment.resx">
-      <DependentUpon>frmDepartment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmEmployees.resx">
-      <DependentUpon>frmEmployees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmEnterBalance.resx">
       <DependentUpon>frmEnterBalance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmFlash.resx">
       <DependentUpon>frmFlash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmBuy_Goods.resx">
+      <DependentUpon>frmBuy_Goods.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmGroupOfGoods.resx">
       <DependentUpon>frmGroupOfGoods.cs</DependentUpon>
@@ -271,23 +307,44 @@
     <EmbeddedResource Include="GUI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmRates.resx">
-      <DependentUpon>frmRates.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmRole.resx">
       <DependentUpon>frmRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmSell.resx">
+      <DependentUpon>frmSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmSupplier.resx">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmSystemLog.resx">
       <DependentUpon>frmSystemLog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmUnit.resx">
-      <DependentUpon>frmUnit.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmWarehouseReport.resx">
+      <DependentUpon>frmWarehouseReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmWarehouse.resx">
-      <DependentUpon>frmWarehouse.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmWarehouseTransfer.resx">
+      <DependentUpon>frmWarehouseTransfer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\UserControlRole.resx">
-      <DependentUpon>UserControlRole.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\ucBuyPhieuNhapHang.resx">
+      <DependentUpon>ucBuyPhieuNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucBuyTheoChungTu.resx">
+      <DependentUpon>ucBuyTheoChungTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucBuyTheoHangHoa.resx">
+      <DependentUpon>ucBuyTheoHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucSellPhieuBanHang.resx">
+      <DependentUpon>ucSellPhieuBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucSellTheoChungTu.resx">
+      <DependentUpon>ucSellTheoChungTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucSellTheoHangHoa.resx">
+      <DependentUpon>ucSellTheoHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucWarehouseTransferPhieuChuyenKho.resx">
+      <DependentUpon>ucWarehouseTransferPhieuChuyenKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

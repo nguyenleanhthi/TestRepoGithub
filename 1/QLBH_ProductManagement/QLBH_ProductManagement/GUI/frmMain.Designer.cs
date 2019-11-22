@@ -45,23 +45,23 @@
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.btnArea = new DevExpress.XtraBars.BarButtonItem();
             this.btnCustomer = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.btnWarehouse = new DevExpress.XtraBars.BarButtonItem();
-            this.btnUnit = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSupplier = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.btnGroupOfGoods = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
-            this.btnRates = new DevExpress.XtraBars.BarButtonItem();
-            this.btnDepartment = new DevExpress.XtraBars.BarButtonItem();
-            this.btnEmployees = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
             this.btnBuy = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSell = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnWarehouseTransfer = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnWarehouseReport = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
             this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
@@ -99,7 +99,6 @@
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.ribbonPage8 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ((System.ComponentModel.ISupportInitialize)(this.imgCL1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
@@ -140,23 +139,23 @@
             this.barButtonItem1,
             this.btnArea,
             this.btnCustomer,
-            this.barButtonItem4,
-            this.btnWarehouse,
-            this.btnUnit,
+            this.btnSupplier,
+            this.barButtonItem5,
+            this.barButtonItem6,
             this.btnGroupOfGoods,
             this.barButtonItem8,
             this.barButtonItem9,
-            this.btnRates,
-            this.btnDepartment,
-            this.btnEmployees,
+            this.barButtonItem10,
+            this.barButtonItem11,
+            this.barButtonItem12,
             this.btnBuy,
-            this.barButtonItem14,
+            this.btnSell,
             this.barButtonItem15,
-            this.barButtonItem16,
+            this.btnWarehouseTransfer,
             this.barButtonItem17,
             this.barButtonItem18,
             this.barButtonItem19,
-            this.barButtonItem20,
+            this.btnWarehouseReport,
             this.barButtonItem21,
             this.barButtonItem22,
             this.skinRibbonGalleryBarItem1,
@@ -308,38 +307,37 @@
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.btnCustomer.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCustomer_ItemClick);
             // 
-            // barButtonItem4
+            // btnSupplier
             // 
-            this.barButtonItem4.Caption = "Nhà Cung Cấp";
-            this.barButtonItem4.Id = 13;
-            this.barButtonItem4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
-            this.barButtonItem4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
-            this.barButtonItem4.Name = "barButtonItem4";
-            this.barButtonItem4.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            this.btnSupplier.Caption = "Nhà Cung Cấp";
+            this.btnSupplier.Id = 13;
+            this.btnSupplier.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSupplier.ImageOptions.Image")));
+            this.btnSupplier.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSupplier.ImageOptions.LargeImage")));
+            this.btnSupplier.Name = "btnSupplier";
+            this.btnSupplier.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnSupplier.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSupplier_ItemClick);
+            // 
+            // barButtonItem5
+            // 
+            this.barButtonItem5.Caption = "Kho Hàng";
+            this.barButtonItem5.Id = 14;
+            this.barButtonItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
+            this.barButtonItem5.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
+            this.barButtonItem5.Name = "barButtonItem5";
+            this.barButtonItem5.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
-            // btnWarehouse
+            // barButtonItem6
             // 
-            this.btnWarehouse.Caption = "Kho Hàng";
-            this.btnWarehouse.Id = 14;
-            this.btnWarehouse.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
-            this.btnWarehouse.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
-            this.btnWarehouse.Name = "btnWarehouse";
-            this.btnWarehouse.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            this.barButtonItem6.Caption = "Đơn Vị Tính";
+            this.barButtonItem6.Id = 15;
+            this.barButtonItem6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.Image")));
+            this.barButtonItem6.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.LargeImage")));
+            this.barButtonItem6.LargeWidth = 70;
+            this.barButtonItem6.Name = "barButtonItem6";
+            this.barButtonItem6.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.btnWarehouse.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnWarehouse_ItemClick);
-            // 
-            // btnUnit
-            // 
-            this.btnUnit.Caption = "Đơn Vị Tính";
-            this.btnUnit.Id = 15;
-            this.btnUnit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.Image")));
-            this.btnUnit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.LargeImage")));
-            this.btnUnit.LargeWidth = 70;
-            this.btnUnit.Name = "btnUnit";
-            this.btnUnit.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.btnUnit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUnit_ItemClick);
             // 
             // btnGroupOfGoods
             // 
@@ -373,38 +371,35 @@
             this.barButtonItem9.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
-            // btnRates
+            // barButtonItem10
             // 
-            this.btnRates.Caption = "Tỷ Giá";
-            this.btnRates.Id = 19;
-            this.btnRates.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.Image")));
-            this.btnRates.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.LargeImage")));
-            this.btnRates.Name = "btnRates";
-            this.btnRates.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            this.barButtonItem10.Caption = "Tỷ Giá";
+            this.barButtonItem10.Id = 19;
+            this.barButtonItem10.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.Image")));
+            this.barButtonItem10.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.LargeImage")));
+            this.barButtonItem10.Name = "barButtonItem10";
+            this.barButtonItem10.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.btnRates.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRates_ItemClick);
             // 
-            // btnDepartment
+            // barButtonItem11
             // 
-            this.btnDepartment.Caption = "Bộ Phận";
-            this.btnDepartment.Id = 20;
-            this.btnDepartment.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDepartment.ImageOptions.Image")));
-            this.btnDepartment.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDepartment.ImageOptions.LargeImage")));
-            this.btnDepartment.Name = "btnDepartment";
-            this.btnDepartment.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            this.barButtonItem11.Caption = "Bộ Phận";
+            this.barButtonItem11.Id = 20;
+            this.barButtonItem11.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem11.ImageOptions.Image")));
+            this.barButtonItem11.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem11.ImageOptions.LargeImage")));
+            this.barButtonItem11.Name = "barButtonItem11";
+            this.barButtonItem11.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.btnDepartment.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDepartment_ItemClick);
             // 
-            // btnEmployees
+            // barButtonItem12
             // 
-            this.btnEmployees.Caption = "Nhân Viên";
-            this.btnEmployees.Id = 21;
-            this.btnEmployees.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployees.ImageOptions.Image")));
-            this.btnEmployees.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnEmployees.ImageOptions.LargeImage")));
-            this.btnEmployees.Name = "btnEmployees";
-            this.btnEmployees.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            this.barButtonItem12.Caption = "Nhân Viên";
+            this.barButtonItem12.Id = 21;
+            this.barButtonItem12.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.Image")));
+            this.barButtonItem12.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.LargeImage")));
+            this.barButtonItem12.Name = "barButtonItem12";
+            this.barButtonItem12.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.btnEmployees.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEmployees_ItemClick);
             // 
             // btnBuy
             // 
@@ -416,14 +411,15 @@
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.btnBuy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBuy_ItemClick);
             // 
-            // barButtonItem14
+            // btnSell
             // 
-            this.barButtonItem14.Caption = "Bán Hàng";
-            this.barButtonItem14.Id = 23;
-            this.barButtonItem14.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem14.ImageOptions.SvgImage")));
-            this.barButtonItem14.Name = "barButtonItem14";
-            this.barButtonItem14.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            this.btnSell.Caption = "Bán Hàng";
+            this.btnSell.Id = 23;
+            this.btnSell.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSell.ImageOptions.SvgImage")));
+            this.btnSell.Name = "btnSell";
+            this.btnSell.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnSell.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSell_ItemClick);
             // 
             // barButtonItem15
             // 
@@ -434,15 +430,16 @@
             this.barButtonItem15.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
-            // barButtonItem16
+            // btnWarehouseTransfer
             // 
-            this.barButtonItem16.Caption = "Chuyển Kho";
-            this.barButtonItem16.Id = 25;
-            this.barButtonItem16.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem16.ImageOptions.SvgImage")));
-            this.barButtonItem16.LargeWidth = 70;
-            this.barButtonItem16.Name = "barButtonItem16";
-            this.barButtonItem16.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            this.btnWarehouseTransfer.Caption = "Chuyển Kho";
+            this.btnWarehouseTransfer.Id = 25;
+            this.btnWarehouseTransfer.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnWarehouseTransfer.ImageOptions.SvgImage")));
+            this.btnWarehouseTransfer.LargeWidth = 70;
+            this.btnWarehouseTransfer.Name = "btnWarehouseTransfer";
+            this.btnWarehouseTransfer.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnWarehouseTransfer.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnWarehouseTransfer_ItemClick);
             // 
             // barButtonItem17
             // 
@@ -471,15 +468,16 @@
             this.barButtonItem19.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
-            // barButtonItem20
+            // btnWarehouseReport
             // 
-            this.barButtonItem20.Caption = "Báo Cáo Kho Hàng";
-            this.barButtonItem20.Id = 29;
-            this.barButtonItem20.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem20.ImageOptions.Image")));
-            this.barButtonItem20.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem20.ImageOptions.LargeImage")));
-            this.barButtonItem20.Name = "barButtonItem20";
-            this.barButtonItem20.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            this.btnWarehouseReport.Caption = "Báo Cáo Kho Hàng";
+            this.btnWarehouseReport.Id = 29;
+            this.btnWarehouseReport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem20.ImageOptions.Image")));
+            this.btnWarehouseReport.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem20.ImageOptions.LargeImage")));
+            this.btnWarehouseReport.Name = "btnWarehouseReport";
+            this.btnWarehouseReport.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnWarehouseReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnWarehouseReport_ItemClick);
             // 
             // barButtonItem21
             // 
@@ -627,25 +625,25 @@
             // 
             this.ribbonPageGroup7.ItemLinks.Add(this.btnArea);
             this.ribbonPageGroup7.ItemLinks.Add(this.btnCustomer);
-            this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem4);
+            this.ribbonPageGroup7.ItemLinks.Add(this.btnSupplier);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "Đối Tác";
             // 
             // ribbonPageGroup8
             // 
-            this.ribbonPageGroup8.ItemLinks.Add(this.btnWarehouse);
-            this.ribbonPageGroup8.ItemLinks.Add(this.btnUnit);
+            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem5);
+            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem6);
             this.ribbonPageGroup8.ItemLinks.Add(this.btnGroupOfGoods);
             this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem8);
             this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem9);
-            this.ribbonPageGroup8.ItemLinks.Add(this.btnRates);
+            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem10);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Kho Hàng";
             // 
             // ribbonPageGroup9
             // 
-            this.ribbonPageGroup9.ItemLinks.Add(this.btnDepartment);
-            this.ribbonPageGroup9.ItemLinks.Add(this.btnEmployees);
+            this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem11);
+            this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem12);
             this.ribbonPageGroup9.Name = "ribbonPageGroup9";
             this.ribbonPageGroup9.Text = "Tổ Chức";
             // 
@@ -662,14 +660,14 @@
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.btnBuy);
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem14);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnSell);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Nhập-Xuất";
             // 
             // ribbonPageGroup10
             // 
             this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem15);
-            this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem16);
+            this.ribbonPageGroup10.ItemLinks.Add(this.btnWarehouseTransfer);
             this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem17);
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
             this.ribbonPageGroup10.Text = "Kho Hàng";
@@ -683,7 +681,7 @@
             // 
             // ribbonPageGroup12
             // 
-            this.ribbonPageGroup12.ItemLinks.Add(this.barButtonItem20);
+            this.ribbonPageGroup12.ItemLinks.Add(this.btnWarehouseReport);
             this.ribbonPageGroup12.ItemLinks.Add(this.barButtonItem21);
             this.ribbonPageGroup12.ItemLinks.Add(this.barButtonItem22);
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
@@ -771,11 +769,6 @@
             this.xtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPagesAndTabControlHeader;
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
-            // ribbonPage8
-            // 
-            this.ribbonPage8.Name = "ribbonPage8";
-            this.ribbonPage8.Text = "ribbonPage8";
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -825,23 +818,23 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem btnArea;
         private DevExpress.XtraBars.BarButtonItem btnCustomer;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
-        private DevExpress.XtraBars.BarButtonItem btnWarehouse;
-        private DevExpress.XtraBars.BarButtonItem btnUnit;
+        private DevExpress.XtraBars.BarButtonItem btnSupplier;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.BarButtonItem btnGroupOfGoods;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
-        private DevExpress.XtraBars.BarButtonItem btnRates;
-        private DevExpress.XtraBars.BarButtonItem btnDepartment;
-        private DevExpress.XtraBars.BarButtonItem btnEmployees;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem10;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem11;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
         private DevExpress.XtraBars.BarButtonItem btnBuy;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem14;
+        private DevExpress.XtraBars.BarButtonItem btnSell;
         private DevExpress.XtraBars.BarButtonItem barButtonItem15;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem16;
+        private DevExpress.XtraBars.BarButtonItem btnWarehouseTransfer;
         private DevExpress.XtraBars.BarButtonItem barButtonItem17;
         private DevExpress.XtraBars.BarButtonItem barButtonItem18;
         private DevExpress.XtraBars.BarButtonItem barButtonItem19;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem20;
+        private DevExpress.XtraBars.BarButtonItem btnWarehouseReport;
         private DevExpress.XtraBars.BarButtonItem barButtonItem21;
         private DevExpress.XtraBars.BarButtonItem barButtonItem22;
         private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
@@ -869,7 +862,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage6;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage8;
     }
 }
 
