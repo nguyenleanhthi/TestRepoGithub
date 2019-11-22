@@ -83,7 +83,7 @@
             // 
             this.svgImageBox1.Location = new System.Drawing.Point(283, 92);
             this.svgImageBox1.Name = "svgImageBox1";
-            this.svgImageBox1.Size = new System.Drawing.Size(216, 156);
+            this.svgImageBox1.Size = new System.Drawing.Size(234, 156);
             this.svgImageBox1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageBox1.SvgImage")));
             this.svgImageBox1.TabIndex = 64;
             this.svgImageBox1.Text = "svgImageBox1";
@@ -101,7 +101,7 @@
             // 
             this.textBox9.Location = new System.Drawing.Point(94, 254);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(405, 21);
+            this.textBox9.Size = new System.Drawing.Size(423, 21);
             this.textBox9.TabIndex = 62;
             // 
             // labelControl10
@@ -199,7 +199,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(94, 65);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(405, 21);
+            this.textBox2.Size = new System.Drawing.Size(423, 21);
             this.textBox2.TabIndex = 49;
             // 
             // labelControl3
@@ -214,7 +214,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(94, 38);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(405, 21);
+            this.textBox1.Size = new System.Drawing.Size(423, 21);
             this.textBox1.TabIndex = 47;
             // 
             // labelControl2
@@ -227,11 +227,11 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(10, 10);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(122, 25);
+            this.labelControl1.Size = new System.Drawing.Size(94, 19);
             this.labelControl1.TabIndex = 45;
             this.labelControl1.Text = "THÔNG TIN";
             // 
@@ -239,7 +239,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 315);
+            this.ClientSize = new System.Drawing.Size(529, 311);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.svgImageBox1);
@@ -263,6 +263,7 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Name = "frmInfor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin";
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();

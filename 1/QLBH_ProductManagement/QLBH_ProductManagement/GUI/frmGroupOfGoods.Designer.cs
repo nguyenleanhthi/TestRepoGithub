@@ -47,7 +47,7 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.grcGroupOfGoods = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -56,7 +56,7 @@
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcGroupOfGoods)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
@@ -186,7 +186,6 @@
             this.barButtonItem8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.Image")));
             this.barButtonItem8.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.LargeImage")));
             this.barButtonItem8.Name = "barButtonItem8";
-            this.barButtonItem8.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
             // barDockControlTop
             // 
@@ -232,19 +231,20 @@
             this.skinBarSubItem1.Id = 4;
             this.skinBarSubItem1.Name = "skinBarSubItem1";
             // 
-            // gridControl1
+            // grcGroupOfGoods
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 26);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.grcGroupOfGoods.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grcGroupOfGoods.Location = new System.Drawing.Point(0, 26);
+            this.grcGroupOfGoods.MainView = this.gridView1;
+            this.grcGroupOfGoods.Name = "grcGroupOfGoods";
+            this.grcGroupOfGoods.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1,
             this.repositoryItemCheckEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(828, 408);
-            this.gridControl1.TabIndex = 6;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grcGroupOfGoods.Size = new System.Drawing.Size(828, 408);
+            this.grcGroupOfGoods.TabIndex = 6;
+            this.grcGroupOfGoods.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.grcGroupOfGoods.Load += new System.EventHandler(this.grcGroupOfGoods_Load);
             // 
             // gridView1
             // 
@@ -253,13 +253,14 @@
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4});
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.grcGroupOfGoods;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Mã";
+            this.gridColumn1.FieldName = "iMaNhom";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
@@ -267,6 +268,7 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Tên";
+            this.gridColumn2.FieldName = "iTenNhom";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
@@ -274,6 +276,7 @@
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Ghi chú";
+            this.gridColumn3.FieldName = "iGhiChu";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
@@ -282,6 +285,7 @@
             // 
             this.gridColumn4.Caption = "Còn quản lý";
             this.gridColumn4.ColumnEdit = this.repositoryItemCheckEdit1;
+            this.gridColumn4.FieldName = "iActive";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
@@ -303,7 +307,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(828, 434);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.grcGroupOfGoods);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -311,7 +315,7 @@
             this.Name = "frmGroupOfGoods";
             this.Text = "Nhóm Hàng";
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcGroupOfGoods)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
@@ -338,7 +342,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl grcGroupOfGoods;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;

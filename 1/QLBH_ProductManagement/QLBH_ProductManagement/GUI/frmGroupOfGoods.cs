@@ -8,6 +8,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using QLBH_ProductManagement.BUS;
+using QLBH_ProductManagement.DTO;
+
 
 namespace QLBH_ProductManagement.GUI
 {
@@ -16,6 +19,12 @@ namespace QLBH_ProductManagement.GUI
         public frmGroupOfGoods()
         {
             InitializeComponent();
+        }
+        GroupOfGoodsBUS goodsbus = new GroupOfGoodsBUS();
+        private void grcGroupOfGoods_Load(object sender, EventArgs e)
+        {
+            List<GroupOfGoodsDTO> list = goodsbus.GetGroupOfGoods();
+            grcGroupOfGoods.DataSource = list;
         }
     }
 }

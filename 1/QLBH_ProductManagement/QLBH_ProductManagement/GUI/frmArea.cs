@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using QLBH_ProductManagement.BUS;
+using QLBH_ProductManagement.DTO;
 
 namespace QLBH_ProductManagement.GUI
 {
@@ -17,5 +19,13 @@ namespace QLBH_ProductManagement.GUI
         {
             InitializeComponent();
         }
+        AreaBUS areaBUS = new AreaBUS();
+
+        private void grcArea_Load_1(object sender, EventArgs e)
+        {
+            List<AreaDTO> list = areaBUS.getArea();
+            grcArea.DataSource = list;
+        }
+
     }
 }

@@ -13,8 +13,8 @@ namespace QLBH_ProductManagement.DAO
     public class ConnectionDB
     {
         //static string path = "Data Source=DESKTOP-EKT2OFS;Initial Catalog=TESTPHANQUYEN;Integrated Security=True";
-        //static SqlConnection con = new SqlConnection(@"Data Source=ANHTHI\SQLSEVER;Initial Catalog=TESTPHANQUYEN;Integrated Security=True");
-        static SqlConnection con = new SqlConnection(@"Data Source=DIEMKIRI\MYDIEM;Initial Catalog=PM_QLBH01;Integrated Security=True");
+        static SqlConnection con = new SqlConnection("Data Source=DIEMKIRI\\MYDIEM;Initial Catalog=TESTPHANQUYEN;Integrated Security=True");
+        //static SqlConnection con = new SqlConnection(@"Data Source=ANHTHI\SQLSEVER;Initial Catalog=DBQLBHSTUPID09;Integrated Security=True");
         public static void OpenConnection()
         {
             if (con.State == ConnectionState.Closed)
